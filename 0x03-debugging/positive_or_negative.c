@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- *  positive_or_negative - Checks for positive or negative numbers
+ * positive_or_negative - Checks for positive or negative numbers
  *
- *  @i: The number to be cheked
+ * @i: The number to be checked
  *
  * Return: Always 0
- *
  */
 
 void positive_or_negative(int i)
