@@ -10,7 +10,7 @@
 
 int count_word(char *s)
 {
-	int flag,c, w;
+	int flag, c, w;
 
 	flag = 0;
 	w = 0;
@@ -32,7 +32,7 @@ int count_word(char *s)
 
 /**
  * strtow - Function that split a function into words
- * @s: String to be split
+ * @str: String to be split
  *
  * Return: Pointer to an array of string on success
  */
