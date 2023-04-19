@@ -2,7 +2,29 @@
 #include <stdlib.h>
 
 /**
- * main - Program that prints the opcodes of its own main function.
+ * print_opcodes - Prints the opcodes of the main program
+ * @a: Address of the main function
+ * @n: Number of bytes to be printed
+ *
+ * Return: void
+ *
+ */
+
+void print_opcodes(char *a, int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		printf("%.2hhx", a[i]);
+		if (i < n - 1)
+			printf(" ");
+	}
+	printf("\n");
+}
+
+/**
+ * main - Program that prints the opcodes of its own main function
  * @argc: Number of arguments
  * @argv: Arguments
  *
@@ -10,33 +32,24 @@
  *
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int bytes, i;
-	char *arr;
+	int n;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	bytes = atoi(argv[1]);
+	n = atoi(argv[1]);
 
-	if (bytes < 0)
+	if (n < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	arr = (char *)main;
 
-	for (i = 0; i < bytes; i++)
-	{
-		if (i == bytes - 1)
-		{
-			printf("%02hhx\n", arr[i]);
-			break;
-		}
-		printf("%02hhx", arr[i]);
-	}
+	print_opcodes((char *)&main, n);
+
 	return (0);
 }
