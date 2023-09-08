@@ -1,41 +1,33 @@
 #include<stdio.h>
 /**
  * main - entry point to the main function
- * Description: Print all possible combinations of two two-digit numbers.
+ * Description: Print all possible different combinations of 3 digits
  * Return: 0 on success
  */
 int main(void)
 {
-	int i, j;
-	int a, b, c, d;
+	int i, j, k, l;
 
-	for (i = 0; i < 100; i++)
+	for (i = 0; i < 1000; i++)
 	{
-		a = i / 10; /* doubles fnum */
-		b = i % 10; /* singles fnum */
+		j = i / 100; /* hundreds */
+		k = (i / 10) % 10; /* tens */
+		l = i % 10; /* singles */
 
-		for (j = 0; j < 100; j++)
+		if (j < k && k < l)
 		{
-			c = j / 10; /* doubles snum */
-			d = j % 10; /* singles snum */
+			putchar(j + '0');
+			putchar(k + '0');
+			putchar(l + '0');
 
-			if (a < c || (a == c && b < d))
+			if (i < 700)
 			{
-				putchar(a + '0');
-				putchar(b + '0');
+				putchar(44);
 				putchar(32);
-				putchar(c + '0');
-				putchar(d + '0');
-
-				if (!(a == 9 && b == 8))
-				{
-					putchar(44);
-					putchar(32);
-				}
 			}
 		}
 	}
-	putchar(10);
+	putchar('\n');
 
 	return (0);
 }
