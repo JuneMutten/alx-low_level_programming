@@ -1,5 +1,5 @@
 #include "main.h"
-
+void print_number(int n);
 /**
  * main - check the code
  *

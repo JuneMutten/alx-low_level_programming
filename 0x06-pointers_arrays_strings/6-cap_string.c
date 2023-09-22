@@ -6,15 +6,39 @@
  */
 char *cap_string(char *str)
 {
-	int index, c;
-	int flag = 1; // Checks if next character should be capitalized. 0-False, 1-True
-	char separator[] =  ",;.!?(){}\n\t\" ";
+	int index = 0;
+	int length = 0;
 
 	for (index = 0; str[index] != '\0'; index++)
 	{
-		if (c = 0; separator[c] != '\0'; c++)
-			flag 1;
-		if 
+		length++;
+	}
+
+	for (index = 0; index < length; index++)
+	{
+		if (str[index] >= 'a' && str[index] <= 'z')
+		{
+			if (str[index - 1] == ' ' ||
+				str[index - 1] == '\t' ||
+				str[index - 1] == '\n' ||
+				str[index - 1] == ',' ||
+				str[index - 1] == '.' ||
+				str[index - 1] == ';' ||
+				str[index - 1] == '!' ||
+				str[index - 1] == '?' ||
+				str[index - 1] == '"' ||
+				str[index - 1] == '(' ||
+				str[index - 1] == ')' ||
+				str[index - 1] == '{' ||
+				str[index - 1] == '}' ||
+				index == 0)
+			{
+				str[index] -= 32;
+			}
+		}
+	}
+	return (str);
+}
 
 
 
