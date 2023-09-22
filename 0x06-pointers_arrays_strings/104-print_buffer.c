@@ -3,7 +3,7 @@
 /**
  * print_buffer - Prints a buffer
  * @b: Buffer to be printed
- * @size: Number of bytes to be printed 
+ * @size: Number of bytes to be printed
  */
 void print_buffer(char *b, int size)
 {
