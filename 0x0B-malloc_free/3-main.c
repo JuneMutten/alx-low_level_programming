@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+int **alloc_grid(int width, int height);
 
 /**
  * print_grid - prints a grid of integers
