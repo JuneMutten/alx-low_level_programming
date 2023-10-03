@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+char *_strdup(char *str);
+
 /**
  * main - check the code for ALX School students.
  *
