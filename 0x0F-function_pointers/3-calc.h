@@ -10,10 +10,10 @@ int (*get_op_func(char *s))(int, int);
 
 /**
  * struct op - Structure for the operators
- * @operator: The operator
+ * @op: The operator
  * @f: Pointer to function associated with pointer
  */
- typedef struct op
+typedef struct op
 {
 	char *op;
 	int (*f)(int a, int b);
